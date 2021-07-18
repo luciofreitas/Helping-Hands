@@ -1,2 +1,2 @@
-# Helping Hands
- Projeto feito na pós da iGTI
+# HelpingHands
+ projeto pós graduação IGTI
