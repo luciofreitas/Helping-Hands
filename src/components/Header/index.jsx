@@ -21,7 +21,9 @@ function Header() {
           <Li>
             <StyledLink to="/orgs">Organizações</StyledLink>
           </Li>
-
+          <Li>
+            <StyledLink to="/orgslist">Orgs Listadas</StyledLink>
+          </Li>
           <Li>
             <StyledLink to="/about">Sobre</StyledLink>
           </Li>

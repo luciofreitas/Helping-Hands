@@ -3,13 +3,14 @@ import { Button } from "reactstrap";
 
 export const Container = styled.div`
   width: 500px;
-  height: 300px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
-  margin: 10% 33% 0 33%;
+  margin: 5% 33% 0 33%;
   border-radius: 30px;
+  background-color: #FFF5EE
 `;
 
 export const Form = styled.form`
@@ -22,8 +23,49 @@ export const Form = styled.form`
 export const FormButton = styled(Button)`
   margin: 0 5px 10px;
   border-radius: 10px;
+  font-weight: bold;
 `;
 
 export const Titulo = styled.h3`
   margin-top: 10px;
+`;
+
+export const InputText = styled.input`
+  width: 300px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 0 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black;
+  
+`;
+export const InputNumber = styled.input`
+   width: 120px;
+   height: 20px;
+   background-color: #FFF5EE;
+   outline: none;
+   border:none;
+   border-bottom: solid 1px black;
+
+`;
+export const InputCEP = styled.input `
+  width: 80px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 0 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black;
+
+`;
+
+export const InputCnpj = styled.input `
+  width: 120px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 0 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black;
 `;

@@ -37,7 +37,7 @@ export const InputText = styled.input`
   margin: 0 0 3px 0;
   outline: none;
   border:none;
-  border-bottom: solid 1px black
+  border-bottom: solid 1px black;
   
 `;
 export const InputAge = styled.input`
@@ -47,17 +47,17 @@ export const InputAge = styled.input`
   margin-bottom: 3px;
   outline:none;
   border:none;
-  border-bottom: solid 1px black
+  border-bottom: solid 1px black;
 
 `;
 
 export const InputNumber = styled.input`
    width: 120px;
-   height: 30px;
+   height: 20px;
    background-color: #FFF5EE;
    outline: none;
    border:none;
-   border-bottom: solid 1px black
+   border-bottom: solid 1px black;
 
 `;
 
@@ -72,5 +72,6 @@ background-color: #FFF5EE;
 margin: 0 0 3px 0;
 outline: none;
 border:none;
-border-bottom: solid 1px black
+border-bottom: solid 1px black;
+
 `;

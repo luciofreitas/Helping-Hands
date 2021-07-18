@@ -7,7 +7,7 @@ import { Titulo } from "./styled";
 function Orgs() {
   return (
     <main>
-      <Titulo>Pagina Orgs</Titulo>
+      <Titulo></Titulo>
 
       <FormOrgs />
     </main>
