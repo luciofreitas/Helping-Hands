@@ -102,14 +102,14 @@ function FormDonors() {
         <label>Data de Nascimento: <InputAge type="date" value={nasc} onChange={handleNasc} /></label>
         
         <label>CEP: <InputCEP type="tel" minLength="8" maxLength="8" value={cep}  onChange={handleCep} pattern="[0-9]" required/></label>
-
-        <label>Endereço: <InputText type="text" value={end} onChange={handleEnd} pattern="[A-Za-z]" required/></label>
         <select id="estados">
           <option value ="">Selecione um estado</option>
         </select>
         <select id="cidades" disabled>
           <option value ="">Selecione uma cidade</option>
         </select>
+        <label>Endereço: <InputText type="text" value={end} onChange={handleEnd} pattern="[A-Za-z]" required/></label>
+  
         <label>Estado: <InputText type="text" value={estado} onChange={handleEstado} pattern="[A-Za-z]" required/></label>
 
         <label>Cidade: <InputText type="text" value={cidade} onChange={handleCidade} pattern="[A-Za-z]" required/></label>

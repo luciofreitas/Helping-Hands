@@ -21,13 +21,14 @@ export const Form = styled.form`
 `;
 
 export const FormButton = styled(Button)`
-  margin: 0 5px 10px;
+  margin: 30px 5px 10px;
   border-radius: 10px;
   font-weight: bold;
 `;
 
 export const Titulo = styled.h3`
-  margin-top: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 `;
 
 export const InputText = styled.input`
