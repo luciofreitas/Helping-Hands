@@ -1,7 +1,8 @@
 import React, {useState} from "react";
+
 import { Link } from "react-router-dom";
 
-import { Container, FormButton, Form, Titulo,InputText, InputNumber, InputAge, LabelSexo, InputCEP} from "./styled";
+import { Container, FormButton, Form, Titulo, InputText, InputNumber, InputAge, LabelSexo, InputCEP} from "./styled";
 
 import "./styleCSS.css";
 
@@ -68,28 +69,6 @@ function FormDonors() {
   }
 
 
-  const selectStates = document.querySelector('#estados');
-  const selectCities = document.querySelector('#cidades');
-
-  function populateCitySelect(){
-    selectStates.addEventListener('change', ()=>{
-      let nodesSelectCities = selectCities.childNodes;
-      [...nodesSelectCities].map(node => node.remove());
-      let estado = selectStates.options[selectStates.selectedIndex].value;
-
-      fetch (`https://servicodados.ibge.gov.br/api/v1/localidades/distritos=${estado}`)
-      .then (res =>res.json())
-      .then (cidades =>{
-        selectCities.removeAttribute('disabled');
-        cidades.map(cidade =>{
-          const option = document.createElement('option');
-          option.textContent = cidade.name;
-          selectCities.appendChild(option);
-        })
-      })
-    })
-  }
-
   return (
     <Container>
       <Titulo>Formulário de Doadores</Titulo>
@@ -102,12 +81,7 @@ function FormDonors() {
         <label>Data de Nascimento: <InputAge type="date" value={nasc} onChange={handleNasc} /></label>
         
         <label>CEP: <InputCEP type="tel" minLength="8" maxLength="8" value={cep}  onChange={handleCep} pattern="[0-9]" required/></label>
-        <select id="estados">
-          <option value ="">Selecione um estado</option>
-        </select>
-        <select id="cidades" disabled>
-          <option value ="">Selecione uma cidade</option>
-        </select>
+
         <label>Endereço: <InputText type="text" value={end} onChange={handleEnd} pattern="[A-Za-z]" required/></label>
   
         <label>Estado: <InputText type="text" value={estado} onChange={handleEstado} pattern="[A-Za-z]" required/></label>

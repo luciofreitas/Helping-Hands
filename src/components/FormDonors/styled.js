@@ -66,12 +66,13 @@ export const LabelSexo = styled.label `
 `;
 
 export const InputCEP = styled.input `
-width: 80px;
-height: 20px;
-background-color: #FFF5EE;
-margin: 0 0 3px 0;
-outline: none;
-border:none;
-border-bottom: solid 1px black;
+  width: 80px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 0 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black;
 
 `;
+

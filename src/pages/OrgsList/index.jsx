@@ -1,12 +1,13 @@
 import React from "react";
 
+import FormOrgList from "../../components/FormOrgList";
+
 import { Titulo } from "./styled";
 
 function OrgsList() {
   return (
     <main>
-      <Titulo>Lista das Organizações</Titulo>
-
+      <FormOrgList />
     </main>
   );
 }
