@@ -7,46 +7,23 @@ import Footer from "./components/Footer";
 import Routes from "./routes";
 
 
-function NewOrgList (){
 
-  const handleFormSubmit =e =>{
-    e.preventDefault();
-  }
-
-  const [addNewOrg, setAddNewOrg] = useState ([
-    {
-      id: 1,
-      denominacao: 'Ong',
-      contato: '21991870404'
-    },
-    {
-      id: 2,
-      denominacao: 'Org2',
-      contato: '0000000000'
-    }
-  ]);
-
-  return (
-    <div>
-      {
-        addNewOrg.map(i=>(
-        <div key={i.id}>{i.denominacao}</div>
-      ))
-      }
-
-    </div>
-  );
-}
 
 function App() {
 
+  const [orgs, setOrgs] = useState ([]);
+
+    const createNewOrg = (newOrg) => {
+      const updatedOrgsList = [...orgs, newOrg]
+      setOrgs(updatedOrgsList)
+    }
   return (
     <BrowserRouter>
       <Header />
-      <Routes />
+      <Routes orgs ={orgs} createNewOrg={createNewOrg} />
       <Footer />
     </BrowserRouter>
   );
 }
 
-export default {App, NewOrgList};
+export default App;

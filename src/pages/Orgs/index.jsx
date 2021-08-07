@@ -4,12 +4,12 @@ import FormOrgs from "../../components/FormOrgs";
 
 import { Titulo } from "./styled";
 
-function Orgs() {
+function Orgs({createNewOrg}) {
   return (
     <main>
       <Titulo></Titulo>
 
-      <FormOrgs />
+      <FormOrgs  createNewOrg={createNewOrg}/>
     </main>
   );
 }

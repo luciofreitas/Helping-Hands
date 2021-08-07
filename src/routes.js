@@ -19,16 +19,16 @@ const PrivateRoute = ({ children, ...rest }) => {
   );
 };
 
-const Routes = () => (
+const Routes = (props) => (
   <Switch>
-    <Route exact path="/" component={Home} />
-    <Route path="/login" component={Login} />
-    <PrivateRoute path="/orgs" component={Orgs} />
-    <PrivateRoute path="/orgslist" component={OrgsList} />
-    <PrivateRoute path="/donors" component={Donors} />
-    <PrivateRoute path="/about" component={About} />
-    <PrivateRoute path="/contact" component={Contact} />
-    <Route path="*" component={NotFound} />
+    <Route exact path="/" component={()=><Home{...props}/>} />
+    <Route path="/login" component={()=><Login{...props}/>} />
+    <PrivateRoute path="/orgs" component={()=><Orgs{...props}/>} />
+    <PrivateRoute path="/orgslist" component={()=><OrgsList{...props}/>} />
+    <PrivateRoute path="/donors" component={()=><Donors{...props}/>} />
+    <PrivateRoute path="/about" component={()=><About{...props}/>} />
+    <PrivateRoute path="/contact" component={()=><Contact{...props}/>} />
+    <Route path="*" component={()=><NotFound{...props}/>} />
   </Switch>
 );
 

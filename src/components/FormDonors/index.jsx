@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 
-import { Link } from "react-router-dom";
-
 import { Container, FormButton, Form, Titulo, InputText, InputNumber, InputAge, LabelSexo, InputCEP} from "./styled";
 
 import "./styleCSS.css";

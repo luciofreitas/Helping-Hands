@@ -1,101 +1,90 @@
 import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import {useHistory } from "react-router-dom";
 
 import { Container, FormButton, Form, Titulo, InputText, InputCnpj, InputNumber, InputCEP } from "./styled";
 
 import "./styleCSS.css"
 
-function FormOrgs() {
+function FormOrgs({createNewOrg}) {
 
-  const [denominacao, setDenominacao] = useState ("");
+const [formData, setFormData] = useState ({
 
-  const [cnpj, setCnpj] = useState ("");
- 
-  const [cep, setCep] = useState ("");
+  denominacao: '',
+  cnpj: '',
+  cep: '',
+  end: '',
+  estado: '',
+  cidade: '',
+  contato: '',
+  email: '',
 
-  const [end, setEnd] = useState ("");
+})
+
+const history = useHistory();
+
+const handleInputChange = (e) =>{
+
+  setFormData ({
+
+    ...formData,
+
+    [e.target.name]: e.target.value
+
+  });
   
-  const [email, setEmail] = useState ("");
+}
 
-  const [estado, setEstado] = useState ("");
+  const handleClean = (e) =>{
 
-  const [cidade, setCidade] = useState ("");
+    setFormData({
 
-  const [contato, setContato] = useState ("");
+      denominacao: '',
+      cnpj: '',
+      cep: '',
+      end: '',
+      estado: '',
+      cidade: '',
+      contato: '',
+      email: '',
 
-  const handleDenominacao = (e)=>{
-    setDenominacao(e.target.value);
+    })
+
   }
 
-  const handleCnpj =(e) =>{
-    setCnpj(e.target.value);
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    createNewOrg({...formData, id: new Date().getTime()})
+
+    history.push('/orgslist')
   }
  
-  const handleCep =(e) =>{
-    setCep(e.target.value);
-  }
-  const handleEnd =(e) =>{
-    setEnd(e.target.value);
-  }
-  const handleEstado =(e) =>{
-    setEstado(e.target.value);
-  }
-  const handleCidade =(e) =>{
-    setCidade(e.target.value);
-  }
-  const handleContato =(e) =>{
-     setContato(e.target.value);
-  }
-  const handleEmail =(e) =>{
-     setEmail(e.target.value);
-  }
-
-  const handleCancel = (e) =>{
-    setDenominacao('');
-    setCnpj('');
-    setCep('');
-    setEnd('');
-    setEstado('');
-    setCidade('');
-    setContato('');
-    setEmail('');
-  }
-  const [next, setNext] = useState("");
-
-  const handleNext = (e)=>{
-
-    setNext(alert("formulario enviado com sucesso"))
-  }
-
-
-
   return (
     <Container>
       <Titulo>Formulário de Organizações</Titulo>
 
-      <Form>
-        <label>Denominação: <InputText type="text" value={denominacao} onChange={handleDenominacao} pattern="[A-Za-z]" required/></label>
+      <Form onSubmit ={handleSubmit}>
+        <label>Denominação: <InputText type="text" name="denominacao" value={formData.denominacao} onChange={handleInputChange} pattern="[A-Za-z]" required/></label>
         
-        <label>CNPJ: <InputCnpj type="tel" minLength="14" maxLength="14" value={cnpj} onChange={handleCnpj} pattern="[0-9]" required/></label>
+        <label>CNPJ: <InputCnpj type="tel" minLength="14" maxLength="14" name="cnpj" value={formData.cnpj} onChange={handleInputChange} pattern="[0-9]" required/></label>
         
-        <label>Contato: <InputNumber type="tel"  minLength="10" maxLength="11" value={contato} onChange={handleContato} pattern="[0-9]" required/> </label>
+        <label>Contato: <InputNumber type="tel"  minLength="10" maxLength="11" name="contato" value={formData.contato} onChange={handleInputChange} pattern="[0-9]" required/> </label>
 
-        <label>Email: <InputText type="text" value={email} onChange={handleEmail} pattern="[A-Za-z]+$+@+_" required/></label>
+        <label>Email: <InputText type="text" name="email" value={formData.email} onChange={handleInputChange} pattern="[A-Za-z]+$+@+_" required/></label>
         
-        <label>CEP: <InputCEP type="tel" minLength="8" maxLength="8" value={cep}  onChange={handleCep} pattern="[0-9]" required/></label>
+        <label>CEP: <InputCEP type="tel" minLength="8" name="cep" maxLength="8" value={formData.cep}  onChange={handleInputChange} pattern="[0-9]" required/></label>
 
-        <label>Endereço: <InputText type="text" value={end} onChange={handleEnd} pattern="[A-Za-z]" required/></label>
+        <label>Endereço: <InputText type="text" name="end" value={formData.end} onChange={handleInputChange} pattern="[A-Za-z]" required/></label>
         
-        <label>Estado: <InputText type="text" value={estado} onChange={handleEstado} pattern="[A-Za-z]" required/></label>
+        <label>Estado: <InputText type="text" name ="estado" value={formData.estado} onChange={handleInputChange} pattern="[A-Za-z]" required/></label>
 
-        <label>Cidade: <InputText type="text" value={cidade} onChange={handleCidade} pattern="[A-Za-z]" required/></label>
+        <label>Cidade: <InputText type="text" name ="cidade" value={formData.cidade} onChange={handleInputChange} pattern="[A-Za-z]" required/></label>
       </Form>
 
       <div>
-        <Link to="/orgslist">
-          <FormButton type="submit" color="primary" value={next} onClick={handleNext}>Confirmar</FormButton>
-        </Link>
-        <FormButton type="reset" color="primary" onClick={handleCancel} >Cancelar</FormButton>
+        <FormButton type="submit" color="primary" onClick={handleSubmit}>Confirmar</FormButton>
+
+        <FormButton type="reset" color="primary" onClick={handleClean} >Cancelar</FormButton>
       </div>
 
     </Container>
