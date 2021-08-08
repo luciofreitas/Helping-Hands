@@ -89,7 +89,7 @@ setFormData ({
       </Form>
       <div>
         <FormButton type="submit" color="primary"onClick={handleSubmit}>Confirmar</FormButton>
-        <FormButton type="reset" color="primary" onClick={handleClean} >Limpar Campos</FormButton>
+        <FormButton type="reset" color="primary" onClick={handleClean} >Cancelar</FormButton>
       </div>
         
         

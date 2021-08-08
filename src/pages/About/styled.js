@@ -8,20 +8,25 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
+  font-weight: bold;
   margin: 5% auto;
   border-radius: 30px;
-  background-color: #FFF5EE
+  background-color: white;
+  padding: 10px;
 `;
 
 export const Titulo = styled.h3`
   text-align: center;
   margin-top: 10px;
+  font-weight: bold;
 `;
 
 export const Div = styled.div`
   display: flex;
 `;
 export const DivText =styled.div`
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 `;
 
 export const InputImg = styled.input`

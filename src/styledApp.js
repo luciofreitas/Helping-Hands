@@ -5,5 +5,12 @@ export const MasterContainer = styled.div`
     height: 100%;
     background-color: #f4f4f4;
     border: 1px solid black;
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+`;
+
+export const PageMainContainer = styled.main`
+
 `;
 

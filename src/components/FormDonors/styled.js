@@ -9,8 +9,9 @@ export const Container = styled.div`
   align-items: center;
   border: 1px solid black;
   margin: 5% auto;
+  background-color: white;
   border-radius: 30px;
-  background-color: #FFF5EE
+  
 `;
 
 export const Form = styled.form`
@@ -28,12 +29,12 @@ export const FormButton = styled(Button)`
 
 export const Title = styled.h3`
   margin-top: 10px;
+  margin-bottom: 30px;
 `;
 
 export const InputName = styled.input`
   width: 315px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;
@@ -42,7 +43,6 @@ export const InputName = styled.input`
 export const InputLastName = styled.input`
   width: 280px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;
@@ -51,7 +51,6 @@ export const InputLastName = styled.input`
 export const InputEnd = styled.input`
   width: 300px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;
@@ -60,7 +59,6 @@ export const InputEnd = styled.input`
 export const InputState = styled.input`
   width: 30px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 5px 3px 0;
   outline: none;
   border:none;
@@ -70,7 +68,6 @@ export const InputState = styled.input`
 export const InputCity = styled.input`
   width: 255px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;
@@ -79,7 +76,6 @@ export const InputCity = styled.input`
 export const InputAge = styled.input`
   width: 150px;
   height: 30px;
-  background-color: #FFF5EE;
   margin-bottom: 3px;
   outline:none;
   border:none;
@@ -90,7 +86,6 @@ export const InputAge = styled.input`
 export const InputNumber = styled.input`
    width: 120px;
    height: 20px;
-   background-color: #FFF5EE;
    outline: none;
    border:none;
    border-bottom: solid 1px black;
@@ -104,7 +99,6 @@ export const LabelSex = styled.label `
 export const InputCEP = styled.input `
   width: 80px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;

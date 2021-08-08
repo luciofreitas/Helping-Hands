@@ -10,7 +10,7 @@ export const Container = styled.div`
     border: 1px solid black;
     margin: 5% auto;
     border-radius: 30px;
-    background-color: #FFF5EE
+    background-color: white;
     `;
 
 export const Titulo = styled.h3`
@@ -32,6 +32,7 @@ export const Form = styled.form`
 export const Label = styled.label`
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
+    font-weight: bold;
     margin-top: 10px;
 `;
 
@@ -39,21 +40,18 @@ export const InputName = styled.input`
     width: 250px;
     outline: none;
     border:none;
-    background-color: #FFF5EE;
     border-bottom: solid 1px black; 
 `;
 export const InputTel = styled.input`
     width: 175px;
     outline: none;
     border:none;
-    background-color: #FFF5EE;
     border-bottom: solid 1px black; 
 `;
 export const InputEmail = styled.input`
     width: 250px;
     outline: none;
     border:none;
-    background-color: #FFF5EE;
     border-bottom: solid 1px black; 
 `;
 export const InputBox = styled.textarea`

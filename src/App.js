@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
   
 import Routes from "./routes";
 
-import { MasterContainer } from "./styledApp";
+import { MasterContainer, PageMainContainer } from "./styledApp";
 
 
 
@@ -44,7 +44,9 @@ function App() {
     <MasterContainer>
       <BrowserRouter>
       <Header />
-      <Routes orgs ={orgs} createNewOrg={createNewOrg} />
+        <PageMainContainer>
+          <Routes orgs ={orgs} createNewOrg={createNewOrg} />
+        </PageMainContainer>
       <Footer />
     </BrowserRouter>
     </MasterContainer>

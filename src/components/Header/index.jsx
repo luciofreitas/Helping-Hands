@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Titulo, Nav, H1, Ul, Li, StyledLink } from "./styled";
+import {HeaderM, Titulo, Nav, H1, Ul, Li, StyledLink } from "./styled";
 
 function Header() {
   return (
-    <main>
+    <HeaderM>
       <Titulo>
         <H1>HelpingHands</H1>
       </Titulo>
@@ -33,7 +33,7 @@ function Header() {
           </Li>
         </Ul>
       </Nav>
-    </main>
+    </HeaderM>
   );
 }
 

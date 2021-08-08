@@ -10,7 +10,7 @@ export const Container = styled.div`
   border: 1px solid black;
   margin: 5% auto;
   border-radius: 30px;
-  background-color: #FFF5EE
+  background-color: white;
 `;
 
 export const Form = styled.form`
@@ -28,14 +28,13 @@ export const FormButton = styled(Button)`
 `;
 
 export const Titulo = styled.h3`
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
 `;
 
 export const InputNome = styled.input`
   width: 245px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 5px;
   outline: none;
   border:none;
@@ -44,7 +43,6 @@ export const InputNome = styled.input`
 export const InputEmail = styled.input`
   width: 321px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;
@@ -53,7 +51,6 @@ export const InputEmail = styled.input`
 export const InputEnd = styled.input`
   width: 300px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;
@@ -62,7 +59,6 @@ export const InputEnd = styled.input`
 export const InputEnd2 = styled.input`
   width: 370px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;
@@ -72,7 +68,6 @@ export const InputEnd2 = styled.input`
 export const InputCity = styled.input`
   width: 250px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;
@@ -81,7 +76,6 @@ export const InputCity = styled.input`
 export const InputUf = styled.input`
   width: 30px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 5px 3px 0;
   outline: none;
   border:none;
@@ -92,7 +86,6 @@ export const InputUf = styled.input`
 export const InputNumber = styled.input`
    width: 120px;
    height: 20px;
-   background-color: #FFF5EE;
    outline: none;
    border:none;
    border-bottom: solid 1px black;
@@ -101,7 +94,6 @@ export const InputNumber = styled.input`
 export const InputCEP = styled.input `
   width: 80px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;
@@ -112,7 +104,6 @@ export const InputCEP = styled.input `
 export const InputCnpj = styled.input `
   width: 120px;
   height: 20px;
-  background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;

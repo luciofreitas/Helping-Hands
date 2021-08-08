@@ -14,3 +14,11 @@ export const FooterR = styled.div`
   font-family: "Mate SC", serif;
   margin: 0 33% 0 33%;
 `;
+
+export const Info = styled.p`
+  font-size: 14px;
+  color:black;
+  font-family: "Mate SC", serif;
+  margin: auto;
+  width: fit-content;
+`;
