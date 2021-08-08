@@ -13,3 +13,21 @@ export const Container = styled.div`
   background-color: #FFF5EE
 `;
 
+export const Titulo = styled.h3`
+  text-align: center;
+  margin-top: 10px;
+`;
+
+export const Div = styled.div`
+  display: flex;
+`;
+export const DivText =styled.div`
+`;
+
+export const InputImg = styled.input`
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  border-radius 10px;
+`;
+
