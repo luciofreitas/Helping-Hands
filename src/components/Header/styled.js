@@ -45,5 +45,6 @@ export const StyledLink = styled(Link)`
     border-radius: 10px;
     Color: rgba(255, 69, 0, 0.5);
     background-color: rgba(211,211,211, 0.5);
+    margin: 1px solid tomato;
   }
 `;
