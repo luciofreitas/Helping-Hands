@@ -37,8 +37,13 @@ export const Li = styled.li`
 `;
 
 export const StyledLink = styled(Link)`
-  font-size: 24px;
+  font-size: 24px; 
   font-weight: normal;
   font-family: "Mate SC", serif;
   color: white;
+  &:hover{
+    border-radius: 10px;
+    Color: rgba(255, 69, 0, 0.5);
+    background-color: rgba(211,211,211, 0.5);
+  }
 `;

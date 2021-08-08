@@ -11,25 +11,25 @@ function Header() {
       <Nav>
         <Ul>
           <Li>
-            <StyledLink to="/">Home</StyledLink>
+            <StyledLink style ={{textDecoration:'none'}}to="/">Home</StyledLink>
           </Li>
 
           <Li>
-            <StyledLink to="/donors">Doadores</StyledLink>
+            <StyledLink style ={{textDecoration:'none'}} to="/donors">Doadores</StyledLink>
           </Li>
 
           <Li>
-            <StyledLink to="/orgs">Organizações</StyledLink>
+            <StyledLink style ={{textDecoration:'none'}} to="/orgs">Organizações</StyledLink>
           </Li>
           <Li>
-            <StyledLink to="/orgslist">Orgs Listadas</StyledLink>
+            <StyledLink style ={{textDecoration:'none'}} to="/orgslist">Orgs Listadas</StyledLink>
           </Li>
           <Li>
-            <StyledLink to="/about">Sobre</StyledLink>
+            <StyledLink style ={{textDecoration:'none'}} to="/about">Sobre</StyledLink>
           </Li>
 
           <Li>
-            <StyledLink to="/contact">Contato</StyledLink>
+            <StyledLink style ={{textDecoration:'none'}} to="/contact">Contato</StyledLink>
           </Li>
         </Ul>
       </Nav>
