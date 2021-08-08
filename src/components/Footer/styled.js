@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 50px;
-  position: absolute;
-  bottom: 0;
   background-color: #deb887;
+  margin-top: auto;
+  border-top: 0px solid black;
 `;
 
 export const FooterR = styled.div`
