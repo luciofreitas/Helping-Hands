@@ -18,6 +18,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 50px;
 `;
 
 export const FormButton = styled(Button)`
@@ -31,14 +32,61 @@ export const Titulo = styled.h3`
   margin-bottom: 30px;
 `;
 
-export const InputText = styled.input`
+export const InputNome = styled.input`
+  width: 245px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 5px;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black; 
+`;
+export const InputEmail = styled.input`
+  width: 321px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 0 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black; 
+`;
+export const InputEnd = styled.input`
   width: 300px;
   height: 20px;
   background-color: #FFF5EE;
   margin: 0 0 3px 0;
   outline: none;
   border:none;
+  border-bottom: solid 1px black; 
+`;
+export const InputEnd2 = styled.input`
+  width: 370px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 0 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black; 
+`;
+
+export const InputCity = styled.input`
+  width: 250px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 0 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black; 
+`;
+export const InputUf = styled.input`
+  width: 30px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 5px 3px 0;
+  outline: none;
+  border:none;
   border-bottom: solid 1px black;
+  text-align:center;
   
 `;
 export const InputNumber = styled.input`
@@ -69,4 +117,11 @@ export const InputCnpj = styled.input `
   outline: none;
   border:none;
   border-bottom: solid 1px black;
+`;
+
+export const Div1 = styled.div`
+  width: auto;
+  height: auto;
+  display: flex;
+  
 `;

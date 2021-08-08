@@ -26,11 +26,29 @@ export const FormButton = styled(Button)`
   font-weight: bold;
 `;
 
-export const Titulo = styled.h3`
+export const Title = styled.h3`
   margin-top: 10px;
 `;
 
-export const InputText = styled.input`
+export const InputName = styled.input`
+  width: 315px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 0 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black;
+`;
+export const InputLastName = styled.input`
+  width: 280px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 0 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black;
+`;
+export const InputEnd = styled.input`
   width: 300px;
   height: 20px;
   background-color: #FFF5EE;
@@ -38,7 +56,25 @@ export const InputText = styled.input`
   outline: none;
   border:none;
   border-bottom: solid 1px black;
-  
+`;
+export const InputState = styled.input`
+  width: 30px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 5px 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black;
+  text-align:center;
+`;
+export const InputCity = styled.input`
+  width: 255px;
+  height: 20px;
+  background-color: #FFF5EE;
+  margin: 0 0 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black;
 `;
 export const InputAge = styled.input`
   width: 150px;
@@ -61,7 +97,7 @@ export const InputNumber = styled.input`
 
 `;
 
-export const LabelSexo = styled.label `
+export const LabelSex = styled.label `
   margin-top: 3px;
 `;
 
