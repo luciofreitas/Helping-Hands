@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
   
 import Routes from "./routes";
 
+import { MasterContainer } from "./styledApp";
+
 
 
 
@@ -39,11 +41,14 @@ function App() {
       setOrgs(updatedOrgsList)
     }
   return (
-    <BrowserRouter>
+    <MasterContainer>
+      <BrowserRouter>
       <Header />
       <Routes orgs ={orgs} createNewOrg={createNewOrg} />
       <Footer />
     </BrowserRouter>
+    </MasterContainer>
+
   );
 }
 

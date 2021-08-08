@@ -4,11 +4,11 @@ import FormDonors from "../../components/FormDonors";
 
 import { Titulo } from "./styled";
 
+import "./style.css"
+
 function Donors() {
   return (
     <main>
-      <Titulo></Titulo>
-
       <FormDonors />
     </main>
   );
