@@ -13,46 +13,30 @@ import { MasterContainer, PageMainContainer } from "./styledApp";
 
 function App() {
 
-  const [orgs, setOrgs] = useState ([
-    {
-      denominacao: 'Ong 1',
-      cnpj: '22222222222',
-      cep: '24020125',
-      estado: 'RJ',
-      cidade: 'Niterói',
-      contato: '21991870404',
-      email: 'luciodfp@gmail.com',
-      end: 'rua quinze de novembro'
-    },
-    {
-      denominacao: 'Ong 2',
-      cnpj: '44444444444444',
-      cep: '24020125',
-      estado: 'RJ',
-      cidade: 'Niterói',
-      contato: '21991870404',
-      email: 'lucio-freitas@hotmail.com',
-      end: 'rua quinze de novembro'
-    }
-  ]);
+  const [orgs, setOrgs] = useState ([]);
 
     const createNewOrg = (newOrg) => {
       const updatedOrgsList = [...orgs, newOrg]
       setOrgs(updatedOrgsList)
     }
 
-    const [donors, setDonors] = useState ([
-      {
-        nome: 'Lucio',
-        sobrenome: 'de Freitas Pereira',
-        contato: '21991870404',
-        email: 'luciodfp@gmail.com'
-      }
-    ]);
+    const [donors, setDonors] = useState ([]);
     const createNewDonor = (newDonor)=>{
       const updatedDonorsList = [...donors, newDonor]
       setDonors(updatedDonorsList)
+      const newDonorWithNearOrgs = addNearOrgsToNewDonor(newDonor);
+      setDonors ([...donors, newDonorWithNearOrgs]);
     }
+
+    const addNearOrgsToNewDonor = (newDonor) => {
+      const nearOrgs = orgs.filter((org) => org.cidade === newDonor.cidade);
+  
+      return {
+        ...newDonor,
+        nearOrgs
+      };
+    };
+
   return (
     <MasterContainer>
       <BrowserRouter>

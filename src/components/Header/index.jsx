@@ -17,6 +17,9 @@ function Header() {
           <Li>
             <StyledLink style ={{textDecoration:'none'}} to="/donors">Doadores</StyledLink>
           </Li>
+          <Li>
+            <StyledLink style ={{textDecoration:'none'}} to="/donorlist">Doadores Cadastrados</StyledLink>
+          </Li>
 
           <Li>
             <StyledLink style ={{textDecoration:'none'}} to="/orgs">Organizações</StyledLink>

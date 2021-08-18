@@ -1,12 +1,12 @@
 import React from 'react';
 
-import {Container, Titulo, Li, Div1, Div2, Div3} from './styled';
+import {Container, Titulo, Li, Div1, Div2, Div3, Div4} from './styled';
 
 function DonorList({donors}) {
     return (
       <Container>
         <Titulo>
-              Organizações Cadastradas
+              Doadores Cadastrados
          </Titulo>
       <div>
         <ul>
@@ -21,6 +21,11 @@ function DonorList({donors}) {
               <Div3>
                 <p>Email: {donor.email}</p>
               </Div3>
+              <Div4>
+                  {donor.nearOrgs && donor.nearOrgs.map((nearOrg)=> (
+                      <p>Organizações Próximas: {nearOrg.denominacao} </p>
+                  ))}
+              </Div4>
             </Li>
           ))}
         </ul>

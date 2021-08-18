@@ -4,8 +4,6 @@ import FormDonors from "../../components/FormDonors";
 
 import { Titulo } from "./styled";
 
-import "./style.css"
-
 function Donors({createNewDonor}) {
   return (
     <main>

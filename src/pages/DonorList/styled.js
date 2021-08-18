@@ -58,3 +58,11 @@ export const Div3 = styled.div`
   justify-content: space-between;
   margin: 5px;
 `;
+export const Div4 = styled.div`
+  width: auto;
+  height: auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+`;
