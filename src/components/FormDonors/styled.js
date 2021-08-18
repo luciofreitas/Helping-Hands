@@ -48,6 +48,15 @@ export const InputLastName = styled.input`
   border:none;
   border-bottom: solid 1px black;
 `;
+
+export const InputEmail = styled.input`
+  width: 321px;
+  height: 20px;
+  margin: 0 0 3px 0;
+  outline: none;
+  border:none;
+  border-bottom: solid 1px black; 
+`;
 export const InputEnd = styled.input`
   width: 300px;
   height: 20px;

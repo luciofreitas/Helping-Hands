@@ -40,12 +40,26 @@ function App() {
       const updatedOrgsList = [...orgs, newOrg]
       setOrgs(updatedOrgsList)
     }
+
+    const [donors, setDonors] = useState ([
+      {
+        nome: 'Lucio',
+        sobrenome: 'de Freitas Pereira',
+        contato: '21991870404',
+        email: 'luciodfp@gmail.com'
+      }
+    ]);
+    const createNewDonor = (newDonor)=>{
+      const updatedDonorsList = [...donors, newDonor]
+      setDonors(updatedDonorsList)
+    }
   return (
     <MasterContainer>
       <BrowserRouter>
       <Header />
         <PageMainContainer>
-          <Routes orgs ={orgs} createNewOrg={createNewOrg} />
+          <Routes orgs ={orgs} createNewOrg={createNewOrg}
+                  donors={donors} createNewDonor={createNewDonor} />
         </PageMainContainer>
       <Footer />
     </BrowserRouter>

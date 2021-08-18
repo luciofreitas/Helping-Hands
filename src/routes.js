@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Orgs from "./pages/Orgs";
 import OrgsList from "./pages/OrgsList";
 import Donors from "./pages/Donors";
+import DonorList from "./pages/DonorList";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
@@ -26,6 +27,7 @@ const Routes = (props) => (
     <PrivateRoute path="/orgs" component={()=><Orgs{...props}/>} />
     <PrivateRoute path="/orgslist" component={()=><OrgsList{...props}/>} />
     <PrivateRoute path="/donors" component={()=><Donors{...props}/>} />
+    <PrivateRoute path="/donorlist" component={()=><DonorList{...props}/>} />
     <PrivateRoute path="/about" component={()=><About{...props}/>} />
     <PrivateRoute path="/contact" component={()=><Contact{...props}/>} />
     <Route path="*" component={()=><NotFound{...props}/>} />

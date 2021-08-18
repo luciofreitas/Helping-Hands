@@ -1,10 +1,13 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 
-import { Container, FormButton, Form, Title, InputName, InputLastName, InputEnd, InputCity, InputState, InputNumber, InputAge, LabelSex, InputCEP} from "./styled";
+import { Container, FormButton, Form, Title, InputName, InputLastName, InputEnd,InputEmail, InputCity, InputState, InputNumber, InputAge, LabelSex, InputCEP} from "./styled";
 
 import "./styleCSS.css";
 
-function FormDonors() {
+
+
+function FormDonors({createNewDonor}) {
 
   const [formData, setFormData] = useState ({
 
@@ -15,15 +18,20 @@ function FormDonors() {
     end: '',
     estado: '',
     cidade: '',
-    contato: ''
+    contato: '',
+    email: ''
 })
 
-  const handleInputChange = (e)=>{
-setFormData ({
+  const history = useHistory();
 
-  ...formData,
-  [e.target.name]: e.target.value
-});
+  const handleInputChange = (e)=>{
+
+  setFormData ({
+
+    ...formData,
+
+    [e.target.name]: e.target.value
+  });
 
   }
   const handleClean = (e)=>{
@@ -36,30 +44,25 @@ setFormData ({
       end: '',
       estado: '',
       cidade: '',
-      contato: ''
+      contato: '',
+      email: ''
     })
 
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert(" Formulário enviado com sucesso")
-    setFormData({
-      nome: '',
-      sobrenome: '',
-      nasc: '',
-      cep: '',
-      end: '',
-      estado: '',
-      cidade: '',
-      contato: ''
-    })
+
+    createNewDonor({...formData, id: new Date().getTime()})
+    
+    history.push('/donorlist')
+
   }
   return (
     <Container>
       <Title>Formulário de Doadores</Title>
 
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <label>Nome: <InputName type="text" name="nome" value={formData.nome} onChange={handleInputChange} pattern="[A-Za-z]" required/></label>
         
         <label>Sobrenome: <InputLastName type="text" name="sobrenome" value={formData.sobrenome} onChange={handleInputChange} pattern="[A-Za-z]" required/></label>
@@ -67,6 +70,8 @@ setFormData ({
         <label>Data de Nascimento: <InputAge type="date" name="nasc" value={formData.nasc} onChange={handleInputChange} /></label>
         
         <label>Contato: <InputNumber type="tel"  minLength="10" maxLength="11" name="contato" value={formData.contato} onChange={handleInputChange} pattern="[0-9]" required/> </label>
+
+        <label>Email: <InputEmail type="text" name="email" value={formData.email} onChange={handleInputChange} pattern="[A-Za-z]+$+@+_" required/></label>
         
         <label>CEP: <InputCEP type="tel" minLength="8" maxLength="8"  name="cep" value={formData.cep} onChange={handleInputChange} pattern="[0-9]" required/></label>
 
@@ -89,6 +94,7 @@ setFormData ({
       </Form>
       <div>
         <FormButton type="submit" color="primary"onClick={handleSubmit}>Confirmar</FormButton>
+
         <FormButton type="reset" color="primary" onClick={handleClean} >Cancelar</FormButton>
       </div>
         

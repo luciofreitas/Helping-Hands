@@ -6,10 +6,10 @@ import { Titulo } from "./styled";
 
 import "./style.css"
 
-function Donors() {
+function Donors({createNewDonor}) {
   return (
     <main>
-      <FormDonors />
+      <FormDonors createNewDonor={createNewDonor} />
     </main>
   );
 }

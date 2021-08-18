@@ -16,7 +16,7 @@ function OrgsList({orgs}) {
           <Li key={org.id} style={{marginRight:22}}>
             <Div1>
               <p>Denominação: {org.denominacao}</p>
-              <p>CNPJ: {org.contato}</p>
+              <p>CNPJ: {org.cnpj}</p>
             </Div1>
             <Div2>
               <p>Contato: {org.contato}</p>
