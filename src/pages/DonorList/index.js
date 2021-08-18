@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Container, Titulo, Li, Div1, Div2} from './styled';
+import {Container, Titulo, Li, Div1, Div2, Div3} from './styled';
 
 function DonorList({donors}) {
     return (
@@ -17,8 +17,10 @@ function DonorList({donors}) {
               </Div1>
               <Div2>
                 <p>Contato: {donor.contato}</p>
-                <p>Email: {donor.email}</p>
               </Div2>
+              <Div3>
+                <p>Email: {donor.email}</p>
+              </Div3>
             </Li>
           ))}
         </ul>
